@@ -1,3 +1,100 @@
-h1 {
-    color: red;
+.container{
+    background: rgba(218, 218, 218, 0.95);
+    width:100%;
+}
+.grid{
+    background: rgba(218, 218, 218, 0.95);
+    width:100%;
+    margin: auto;
+    margin-top: 100px;
+    max-width:700px;
+}
+.right{
+    display: inline-block;
+    width:25%;
+    float:right;
+    background-color: rgba(223,159,188,0.95);
+    padding: 10px;
+    border-radius: 4px;
+}
+.left{
+    display: inline-block;
+    width: 65%;
+    background-color: rgba(109, 132, 255, 0.5);
+    padding: 10px;
+    border-radius: 4px;
+}
+.items{
+    padding:5px;
+}
+.item{
+    display: block;
+}
+.search{
+
+}
+.purchases{
+    padding: 5px;
+}
+.inner-item{
+    width:100%;
+}
+.item_name{
+    width:25%;
+    display:inline-block;
+    padding: 2px;
+    horiz-align: left;
+}
+.item_count{
+    display:inline-block;
+    padding: 2px;
+    horiz-align: center;
+}
+.item_bought{
+    display:inline-block;
+    padding: 2px;
+    width:33%;
+    float: right;
+}
+
+
+
+
+.segments{
+    display: block;
+    color: rgba(25, 25, 25, 0.87);
+}
+.circles{
+    background: rgba(219, 96, 10, 0.9);
+    color:white;
+    font-size: 13px;
+    border-radius:10px;
+    width:18px;
+    text-align: center;
+}
+.element{
+    display: inline-flex;
+    padding:5px;
+    background: rgba(232, 232, 232, 0.95);
+    border-radius: 4px;
+    color: rgba(49, 49, 49, 0.96);
+    border: 1px outset rgba(221,162,189,0.96);
+}
+.top{
+    background-color: #3bff57;
+    padding: 10px;
+}
+.input{
+    padding: 5px;
+    background-color: rgba(255, 166, 96, 0.64);
+}
+
+.but-toAdd{
+    background-color: #ff1318;
+    float:right;
+}
+.bl-toBuy{
+}
+.bl-РҐ{
+
 }
