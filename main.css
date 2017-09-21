@@ -8,30 +8,34 @@
     margin: auto;
     margin-top: 100px;
     max-width:700px;
+    min-width: 500px;
 }
 .right{
     display: inline-block;
     width:25%;
     float:right;
-    background-color: rgba(223,159,188,0.95);
+    background-color: rgba(240, 183, 138, 0.95);
     padding: 10px;
     border-radius: 4px;
+
 }
 .left{
     display: inline-block;
     width: 65%;
-    background-color: rgba(109, 132, 255, 0.5);
+    background-color: rgba(145, 152, 255, 0.5);
     padding: 10px;
     border-radius: 4px;
 }
 .items{
-    padding:5px;
+    padding:15px;
 }
 .item{
     display: block;
 }
-.search{
-
+.form{
+    display: inline-flex;
+    width:100%;
+    height:35px;
 }
 .purchases{
     padding: 5px;
@@ -57,9 +61,6 @@
     float: right;
 }
 
-
-
-
 .segments{
     display: block;
     color: rgba(25, 25, 25, 0.87);
@@ -79,22 +80,133 @@
     border-radius: 4px;
     color: rgba(49, 49, 49, 0.96);
     border: 1px outset rgba(221,162,189,0.96);
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
 }
-.top{
-    background-color: #3bff57;
-    padding: 10px;
+.label_count{
+    display:inline-flex;
+    width: 14px;
+    height: 18px;
+    color: rgba(81, 81, 81, 0.96);
+    font-size: 13px;
+    font-weight: bolder;
+    background: rgba(232, 232, 232, 0.95);
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    border-radius:2px;
+    padding-left:7px;
+    padding-top:2px;
+    margin:auto;
 }
+
+
+
+
+
+/*Buttons*/
+
+
+
 .input{
     padding: 5px;
-    background-color: rgba(255, 166, 96, 0.64);
+    width: 80%;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: none;
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+.input:hover{
+    border:1px solid #dededf;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75);
+}
+.but_toAdd{
+    color:white;
+    background: rgba(90, 90, 180, 0.71);
+    width:100px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border:2px solid rgba(111, 117, 194, 0.71);
+    border-left: none;
+    font-size:0.8em;
+    font-weight: bold;
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+.but_toAdd:hover{
+    background: #2c2c58;
+    border:1px solid #2c2c58;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75);
 }
 
-.but-toAdd{
-    background-color: #ff1318;
-    float:right;
-}
-.bl-toBuy{
-}
-.bl-РҐ{
 
+.bl-Х{
+    display:inline-block;
+    float: right;
+    width:25px;
+    height:25px;
+    background-color: #d92b2f;
+    border:1px solid #d92b2f;
+    color: #fbeaeb;
+    font-size:0.6em;
+    border-radius: 2px;
+    font-weight: bold;
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    padding-top:1px;
+}.bl-toBuy{
+     display:inline-block;
+     float: right;
+     height:25px;
+     background-color: #f3f3f3;
+     border:1px solid #f3f3f3;
+     color: #5b5b5b;
+     font-size:0.6em;
+     border-radius: 2px;
+     font-weight: bolder;
+     box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+ }
+.bl-Х:hover{
+    background: #992932;
+    border:1px solid #992932;
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+.bl-toBuy:hover{
+    background: #8f898b;
+    border:1px solid #8f898b;
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+
+.but-plus{
+    width:25px;
+    height:25px;
+    background-color: #7cc162;
+    border:1px solid #7cc162;
+    color: #e9ffdd;
+    font-size:0.7em;
+    border-radius: 12px;
+    font-weight: bolder;
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    padding-top:1px;
+}
+.but-plus:hover{
+    background: #589149;
+    border:1px solid #589149;
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+
+.but-minus{
+    width:25px;
+    height:25px;
+    background-color: #ee9fa1;
+    border:1px solid #ee9fa1;
+    color: #fdf6f6;
+    font-size:0.7em;
+    border-radius: 12px;
+    font-weight: bolder;
+    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    padding-top:1px;
+}
+.but-minus:hover{
+    background: #7a514b;
+    border:1px solid #7a514b;
+    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    text-align: center;
 }
