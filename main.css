@@ -1,6 +1,6 @@
 .body{
     font-family: Lato,'Helvetica Neue'
-    ,Arial,Helvetica,sans-serif;
+    ,Arial,Helvetica, sans-serif;
 }
 
 .grid{
@@ -105,7 +105,7 @@
 .badge{
     position:fixed;
     bottom: -75px;
-    left:0px;
+    left:0;
     font-size: 1.5em;
     color:white;
     text-align: center;
@@ -161,7 +161,7 @@
  }
 .input:focus{
     border: 1px solid rgba(41, 135, 205, 0.61);
-    box-shadow: 0px 0px 15px rgba(41, 135, 205, 0.61);
+    box-shadow: 0 0 15px rgba(41, 135, 205, 0.61);
 }
 
 .but_toAdd{
@@ -179,7 +179,7 @@
 .but_toAdd:hover{
     background: #2c2c58;
     border:1px solid #2c2c58;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
 }
 
 
@@ -214,12 +214,12 @@
 .bl-Х:hover{
     background: #992932;
     border:1px solid #992932;
-    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    box-shadow: 0 0 5px rgba(0,0,0, .75);
 }
 .bl-toBuy:hover{
     background: #8f898b;
     border:1px solid #8f898b;
-    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    box-shadow: 0 0 5px rgba(0,0,0, .75);
 }
 
 .but-plus{
@@ -237,7 +237,7 @@
 .but-plus:hover{
     background: #589149;
     border:1px solid #589149;
-    box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+    box-shadow: 0 0 5px rgba(0,0,0, .75);
 }
 
 .but-minus{
