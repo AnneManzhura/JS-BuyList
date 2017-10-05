@@ -8,72 +8,16 @@
 <body style="background: rgba(218,218,218,0.95)">
 <div class="container">
     <div class="grid">
+
         <div class="left">
             <div class="items">
-
                 <div class="form">
-                    <input class ="input " type="text"  placeholder="Назва товару" >
+                    <input class ="input" type="text"  placeholder="Назва товару" >
                     <button class="but_toAdd tooltip" data-tooltip="Додати новий товар">Додати</button>
                 </div>
-
-                <div class="item">
-                    <div> <hr> </div>
-                    <div class="inner-item">
-                        <div class="item_name">
-                            <span> Помідори</span>
-                        </div>
-                        <div class="item_count">
-                            <button class="but-minus tooltip" data-tooltip="Зменшити кількість">-</button>
-                            <span class="label_count">1</span>
-                            <button class="but-plus tooltip" data-tooltip="Збільшити кількість">+</button>
-                        </div>
-                        <div class="item_bought">
-                            <button class="bl-Х tooltip" data-tooltip="Видалити">&#x2718;</button>
-                            <button class="bl-toBuy tooltip" data-tooltip="Позначити як куплене">Куплено</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div> <hr> </div>
-                    <div class="inner-item">
-                        <div class="item_name">
-                            <span> Огірки</span>
-                        </div>
-                        <div class="item_count">
-                            <button class="but-minus tooltip" data-tooltip="Зменшити кількість">-</button>
-                            <span class="label_count">1</span>
-                            <button class="but-plus tooltip" data-tooltip="Збільшити кількість">+</button>
-                        </div>
-                        <div class="item_bought">
-                            <button class="bl-Х tooltip" data-tooltip="Видалити">&#x2718;</button>
-                            <button class="bl-toBuy tooltip" data-tooltip="Позначити як куплене">Куплено</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div> <hr> </div>
-                    <div class="inner-item">
-                        <div class="item_name">
-                            <span> Сир</span>
-                        </div>
-                        <div class="item_count">
-                            <button class="but-minus tooltip" data-tooltip="Зменшити кількість">-</button>
-                            <span class="label_count">1</span>
-                            <button class="but-plus tooltip" data-tooltip="Збільшити кількість">+</button>
-                        </div>
-                        <div class="item_bought">
-                            <button class="bl-Х tooltip" data-tooltip="Видалити">&#x2718;</button>
-                            <button class="bl-toBuy tooltip" data-tooltip="Позначити як куплене">Куплено</button>
-
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
+
         <div class="right">
             <div class="purchases">
                 <div class="segments">
@@ -102,19 +46,51 @@
                 </div>
                 <div> <hr> </div>
                 <div class="segments">
-                    <div class="purchases">
-
-                    </div>
+                    <div class="purchases"></div>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
+
+
+
 <div class="badge">
-    <div class="title">Buy List</div>
+    <div class="badge_title">Buy List</div>
     <div class="created">Created by: </div>
     <div class="me"> Anne Manzhura </div>
 </div>
+
+
+<div class="one_row_template" style="display: none">
+    <div class="item">
+        <div> <hr> </div>
+        <div class="inner_item">
+            <span class="item_name">
+                <span class="title"></span>
+                <span class="title_edit">
+                    <input autofocus type="text" placeholder="Нова назва">
+                </span>
+            </span>
+            <div class="item_count">
+                <button class="but_minus tooltip" data-tooltip="Зменшити кількість">-</button>
+                <span class="label_count">1</span>
+                <button class="but_plus tooltip" data-tooltip="Збільшити кількість">+</button>
+            </div>
+            <div class="item_buying">
+                <button class="bl_toUnBuy tooltip" data-tooltip="Повернути в список" >Не куплено</button>
+                <button class="bl_delete tooltip" data-tooltip="Видалити">&#x2718;</button>
+                <button class="bl_toBuy tooltip" data-tooltip="Позначити як куплене">Куплено</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="main.js"> </script>
+
 </body>
 </html>

@@ -4,7 +4,6 @@
 }
 
 .grid{
-    width:100%;
     background: rgba(218, 218, 218, 0.95);
     margin: auto;
     margin-top: 100px;
@@ -17,7 +16,7 @@
     width: 65%;
     background-color: white;
     border-radius: 4px;
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
     box-sizing: border-box;
 }
 .right{
@@ -29,38 +28,56 @@
     background-color: white;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
 }
 .items{
-    padding:15px; /*TO CHOOSE 10 OR 15*/
+    padding:15px;
 }
 .form{
     display: inline-flex;
     width:100%;
-    height:40px;
+    height:37px;
 }
+
 .item{
     display: block;
 }
+
 .purchases{
     padding: 5px;
 }
 .item_name{
+    width:33%;
+}
+.title{
     display:inline-block;
     width:33%;
+
     padding: 2px;
+}
+.title_edit{
+    display:none;
+    width:33%;
+    padding: 2px;
+
 }
 .item_count{
     display:inline-block;
     padding: 2px;
     horiz-align: center;
+    vertical-align: top;
 }
-.item_bought{
+.item_buying{
     display: inline-block;
     width:33%;
     padding: 2px;
     float: right;
 }
+
+
+
+
+
 
 .segments{
     display: block;
@@ -81,31 +98,38 @@
     border-radius: 4px;
     color: rgba(49, 49, 49, 0.96);
     border: 1px outset rgba(221, 162, 189, 0);
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
     margin-top:4px;
 }
+
 .label_count{
     display:inline-flex;
     width: 14px;
     height: 18px;
+
     color: rgba(81, 81, 81, 0.96);
     font-size: 13px;
     font-weight: bolder;
     background: rgba(232, 232, 232, 0.95);
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
     border-radius:2px;
     padding-left:7px;
     padding-top:2px;
     margin:auto;
+
 }
 
+
+
 /*   BADGE   */
+
 
 
 .badge{
     position:fixed;
     bottom: -75px;
     left:0;
+    opacity: 0.8;
     font-size: 1.5em;
     color:white;
     text-align: center;
@@ -117,9 +141,10 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     transition: bottom 1s ease, background 2s ease;
+
 }
 .created{
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 10px;
     font-size: 0.6em;
     font-weight: lighter;
@@ -134,15 +159,11 @@
 
 .badge:hover{
     bottom:0;
-    background: rgba(12, 27, 164, 0.74);
+    background: rgba(12, 27, 164, 1);
 }
 
 
-
-
-/*Buttons*/
-
-
+/*  INPUT  */
 
 .input{
     text-indent: 15px;
@@ -152,17 +173,23 @@
     border-top-left-radius: 4px;
     border:1px solid #dededf;
     border-right: none;
-    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.75);
-
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.75);
 }
 .input:hover{
-     border: 2px dotted rgba(34, 28, 31, 0.16);
-     box-shadow: 2px 2px 15px rgba(2, 2, 2, 0.62);
- }
+    border: 2px dotted rgba(34, 28, 31, 0.16);
+    box-shadow: 2px 2px 8px rgba(2, 2, 2, 0.62);
+}
 .input:focus{
     border: 1px solid rgba(41, 135, 205, 0.61);
-    box-shadow: 0 0 15px rgba(41, 135, 205, 0.61);
+    box-shadow: 0 0 10px rgba(41, 135, 205, 0.61);
 }
+
+
+
+/*  BUTTONS  */
+
+
+
 
 .but_toAdd{
     color:white;
@@ -174,7 +201,7 @@
     border-left: none;
     font-size:0.9em;
     font-weight: bold;
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 1px 1px 2px rgba(0,0,0, .75);
 }
 .but_toAdd:hover{
     background: #2c2c58;
@@ -183,21 +210,9 @@
 }
 
 
-.bl-Х{
-    display:inline-block;
-    float: right;
-    width:25px;
-    height:25px;
-    background-color: #d92b2f;
-    border:1px solid #d92b2f;
-    color: #fbeaeb;
-    font-size:0.6em;
-    border-radius: 2px;
-    font-weight: bold;
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
-    padding-top:1px;
 
-}.bl-toBuy{
+
+.bl_toBuy{
      display:inline-block;
      float: right;
      height:25px;
@@ -208,21 +223,58 @@
      font-size:0.6em;
      border-radius: 2px;
      font-weight: bolder;
-     box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+     box-shadow: 2px 2px 8px rgba(0,0,0, .75);
      margin-right:3px;
  }
-.bl-Х:hover{
-    background: #992932;
-    border:1px solid #992932;
-    box-shadow: 0 0 5px rgba(0,0,0, .75);
-}
-.bl-toBuy:hover{
+
+.bl_toBuy:hover{
     background: #8f898b;
     border:1px solid #8f898b;
     box-shadow: 0 0 5px rgba(0,0,0, .75);
 }
+.bl_toUnBuy{
+    display: none;
+    float: right;
+    height:25px;
+    width: 80px;
+    background-color: #f3f3f3;
+    border:1px solid #f3f3f3;
+    color: #5b5b5b;
+    font-size:0.6em;
+    border-radius: 2px;
+    font-weight: bolder;
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
+    margin-right:3px;
+}
 
-.but-plus{
+.bl_toUnBuy:hover{
+    background: #8f898b;
+    border:1px solid #8f898b;
+    box-shadow: 0 0 5px rgba(0,0,0, .75);
+}
+.bl_delete{
+    float: right;
+    width:25px;
+    height:25px;
+    background-color: #d92b2f;
+    border:1px solid #d92b2f;
+    color: #fbeaeb;
+    font-size:0.6em;
+    border-radius: 2px;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
+    padding-top:1px;
+}
+
+.bl_delete:hover{
+    background: #992932;
+    border:1px solid #992932;
+    box-shadow: 0 0 5px rgba(0,0,0, .75);
+}
+
+
+
+.but_plus{
     width:25px;
     height:25px;
     background-color: #7cc162;
@@ -231,16 +283,16 @@
     font-size:0.7em;
     border-radius: 12px;
     font-weight: bolder;
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
     padding-top:1px;
 }
-.but-plus:hover{
+.but_plus:hover{
     background: #589149;
     border:1px solid #589149;
     box-shadow: 0 0 5px rgba(0,0,0, .75);
 }
 
-.but-minus{
+.but_minus{
     width:25px;
     height:25px;
     background-color: #ee9fa1;
@@ -249,15 +301,20 @@
     font-size:0.7em;
     border-radius: 12px;
     font-weight: bolder;
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    box-shadow: 2px 2px 8px rgba(0,0,0, .75);
     padding-top:1px;
 }
-.but-minus:hover{
+.but_minus:hover{
     background: #7a514b;
     border:1px solid #7a514b;
     box-shadow: 0  0 5px rgba(0,0,0, .75);
     text-align: center;
 }
+button{  /*not to have blue border*/
+    outline: none;
+}
+
+/*  TOOLTIP  */
 
 .tooltip{
     position: relative;
@@ -280,10 +337,10 @@
 }
 .tooltip:hover::after{
     left: 50%;
-    margin-left: -43px;
+    margin-left: -48px;
     padding: 3px;
-    width: 80px;
-    opacity: 0.9;
+    width: 90px;
+    opacity: 0.8;
 
     visibility: visible;
     font-weight: lighter;
@@ -294,28 +351,20 @@
 }
 
 
-/* media*/
+/* MEDIA EVENTS  */
 @media print {
-    .title{
-        visibility: hidden;
-        height:0;
-    }
-    .created{
-        font-size: 0.45em;
-        padding-top: 0;
-    }
-    .me{
-        font-size: 0.5em;
-        font-weight: bolder;
+    .badge_title{
+        display: none;
     }
     .badge{
+        font-size: 15px;
+        font-weight: bolder;
         background:white;
         bottom:0;
-        height: 25px;
+        height: 35px;
         color: blueviolet;
-        border: 1px solid blueviolet;
+        border: 2px solid blueviolet;
     }
-
 }
 @media (max-width:500px){
     .left{
@@ -326,6 +375,22 @@
         width:100%;
         margin-left: 0;
         margin-top:10px;
-
     }
 }
+
+/*  FOR STATES OF BUYING  */
+.hidden {
+    visibility: hidden;
+}
+.crossed{
+    text-decoration: line-through;
+}
+.none {
+    display: none;
+
+}
+.visible{
+    display: inline-block;
+}
+
+
