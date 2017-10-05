@@ -20,13 +20,10 @@
 
         <div class="right">
             <div class="purchases">
-                <div class="segments">
-                    <h3>Залишилося</h3>
-                </div>
+                <h3 style="padding: 5px">Залишилося</h3>
                 <div> <hr> </div>
-                <div class="segments">
-                    <div class="purchases">
-                        <span class="element">
+                    <div class="needed_purchases">
+                     <!--   <span class="element">
                             <span class="name">Помідори</span>
                             <span class="circles">1</span>
                         </span>
@@ -37,20 +34,14 @@
                         <span class="element">
                             <span class="name">Сир</span>
                              <span class="circles">1</span>
-                        </span>
+                        </span>-->
                     </div>
-                </div>
                 <div> <hr> </div>
-                <div class="segments">
-                    <h3>Куплено</h3>
-                </div>
+                <h3 style="padding: 5px">Куплено</h3>
                 <div> <hr> </div>
-                <div class="segments">
-                    <div class="purchases"></div>
-                </div>
+                <div class="done_purchases"></div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -75,7 +66,7 @@
             </span>
             <div class="item_count">
                 <button class="but_minus tooltip" data-tooltip="Зменшити кількість">-</button>
-                <span class="label_count">1</span>
+                <span class="label_count"></span>
                 <button class="but_plus tooltip" data-tooltip="Збільшити кількість">+</button>
             </div>
             <div class="item_buying">
@@ -85,6 +76,21 @@
             </div>
         </div>
     </div>
+</div>
+
+
+
+<div class="one_needed_item_template" style="display: none">
+    <span class="element">
+        <span class="name"></span>
+        <span class="circles"></span>
+    </span>
+</div>
+<div class="one_bought_item_template" style="display: none">
+    <span class="element">
+        <span class="name crossed"></span>
+        <span class="circles crossed"></span>
+    </span>
 </div>
 
 

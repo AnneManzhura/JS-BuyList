@@ -1,38 +1,57 @@
 $(function(){
 
     var $list= $(".items");
-    var ONE_ROW_HTML = $(".one_row_template").html();
+    var $needed_items= $(".needed_purchases");
+    var $bought_items= $(".done_purchases");
     var $new_input= $(".input");
 
+    var ONE_ROW_HTML = $(".one_row_template").html();
+    var ONE_NEEDED_ITEM_HTML = $(".one_needed_item_template").html();
+    var ONE_BOUGHT_ITEM_HTML = $(".one_bought_item_template").html();
 
     function addItem(title){
         var $node = $(ONE_ROW_HTML);
+        var needed_item=$(ONE_NEEDED_ITEM_HTML);
+        var bought_item=$(ONE_BOUGHT_ITEM_HTML);
         var quantity=1;
         var $quantity_label=$node.find(".label_count");
 
         $quantity_label.text(quantity);
 
         $node.find(".title").text(title);
-        $list.append($node);
 
+        $list.append($node);
         $node.hide();
         $node.slideDown(function () {
             $node.show();
         });
+        $bought_items.append(bought_item);
+        $needed_items.append(needed_item);
+        bought_item.hide();
+
+        needed_item.find(".name").text(title);
+        needed_item.find(".circles").text(quantity);
+        bought_item.find(".name").text(title);
+        bought_item.find(".circles").text(quantity);
 
 
         $node.find(".but_plus").click(function () {
-            $node.find(".label_count").fadeOut(100, function () {
             quantity+=1;
+            needed_item.find(".circles").text(quantity);
+            bought_item.find(".circles").text(quantity);
+            $node.find(".label_count").fadeOut(100, function () {
             $quantity_label.text(quantity);
             $node.find(".label_count").fadeIn(100);
             });
+
         });
 
         $node.find(".but_minus").click(function () {
             if (quantity > 1) {
-                $node.find(".label_count").fadeOut(100, function () {
                 quantity -= 1;
+                needed_item.find(".circles").text(quantity);
+                bought_item.find(".circles").text(quantity);
+                $node.find(".label_count").fadeOut(100, function () {
                 $quantity_label.text(quantity);
                 $node.find(".label_count").fadeIn(100);
                 });
@@ -43,9 +62,15 @@ $(function(){
             $node.slideUp(function () {
                 $node.remove();
             });
+            needed_item.remove();
+            bought_item.remove();
         });
 
         $node.find(".bl_toBuy").click(function () {
+
+            needed_item.hide();
+            bought_item.show();
+
             $node.find(".inner_item").fadeOut(200, function () {
                 $node.find(".bl_toBuy").addClass("none");
                 $node.find(".but_minus").addClass("hidden");
@@ -58,6 +83,8 @@ $(function(){
         });
 
         $node.find(".bl_toUnBuy").click(function(){
+            needed_item.show();
+            bought_item.hide();
             $node.find(".inner_item").fadeOut(200, function () {
                 $node.find(".bl_toBuy").removeClass("none");
                 $node.find(".bl_toUnBuy").removeClass("visible");
