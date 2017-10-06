@@ -6,8 +6,8 @@
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body style="background: rgba(218,218,218,0.95)">
-<div class="container">
-    <div class="grid">
+
+    <div class="grid ">
 
         <div class="left">
             <div class="items">
@@ -18,32 +18,19 @@
             </div>
         </div>
 
-        <div class="right">
+        <div class="right ">
             <div class="purchases">
                 <h3 style="padding: 5px">Залишилося</h3>
                 <div> <hr> </div>
-                    <div class="needed_purchases">
-                     <!--   <span class="element">
-                            <span class="name">Помідори</span>
-                            <span class="circles">1</span>
-                        </span>
-                             <span class="element">
-                             <span class="name">Огірки</span>
-                             <span class="circles">1</span>
-                        </span>
-                        <span class="element">
-                            <span class="name">Сир</span>
-                             <span class="circles">1</span>
-                        </span>-->
-                    </div>
+                    <div class="needed_purchases"></div>
                 <div> <hr> </div>
                 <h3 style="padding: 5px">Куплено</h3>
                 <div> <hr> </div>
                 <div class="done_purchases"></div>
             </div>
         </div>
+
     </div>
-</div>
 
 
 
@@ -54,26 +41,26 @@
 </div>
 
 
+
+
 <div class="one_row_template" style="display: none">
     <div class="item">
         <div> <hr> </div>
         <div class="inner_item">
             <span class="item_name">
                 <span class="title"></span>
-                <span class="title_edit">
-                    <input autofocus type="text" placeholder="Нова назва">
-                </span>
+                <input class="title_edit" autofocus type="text" placeholder="Нова назва">
             </span>
-            <div class="item_count">
+            <span class="item_count">
                 <button class="but_minus tooltip" data-tooltip="Зменшити кількість">-</button>
                 <span class="label_count"></span>
                 <button class="but_plus tooltip" data-tooltip="Збільшити кількість">+</button>
-            </div>
-            <div class="item_buying">
+            </span>
+            <span class="item_buying">
                 <button class="bl_toUnBuy tooltip" data-tooltip="Повернути в список" >Не куплено</button>
                 <button class="bl_delete tooltip" data-tooltip="Видалити">&#x2718;</button>
                 <button class="bl_toBuy tooltip" data-tooltip="Позначити як куплене">Куплено</button>
-            </div>
+            </span>
         </div>
     </div>
 </div>
