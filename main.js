@@ -14,7 +14,7 @@ $(function(){
         var $needed_item=$(ONE_NEEDED_ITEM_HTML);
         var $bought_item=$(ONE_BOUGHT_ITEM_HTML);
         var quantity=1;
-        var new_name=$node.find(".title_edit").val();
+        var new_name=$node.find(".titleEdit").val();
         var $quantity_label= $node.find(".label_count");
         
         $quantity_label.text(quantity);
@@ -40,10 +40,6 @@ $(function(){
             $needed_item.find(".circles").text(quantity);
             $bought_item.find(".circles").text(quantity);
             $node.find(".label_count").fadeOut(100, function () {
-                if(quantity>9 && quantity<99){
-                    //$node.find(".label_count").width(20);
-                    $node.find(".label_count").addClass("center");
-                }
                 $quantity_label.text(quantity);
                 $node.find(".label_count").fadeIn(100);
             });
@@ -55,12 +51,6 @@ $(function(){
                 $needed_item.find(".circles").text(quantity);
                 $bought_item.find(".circles").text(quantity);
                 $node.find(".label_count").fadeOut(100, function () {
-                    if(quantity<10){
-                        $node.find(".label_count").width(14);
-                    }
-                    if(quantity>9 && quantity<99){
-                        $node.find(".label_count").width(20);
-                    }
                     $quantity_label.text(quantity);
                     $node.find(".label_count").fadeIn(100);
                 });
@@ -106,36 +96,33 @@ $(function(){
         });
 
         $node.find(".title").click(function(){
-            $node.find(".title").hide();
-            $node.find(".title_edit").addClass("visible");
-            $node.find(".title_edit").val(title);
-
-
-            /*node.find(".title_edit").attr("value", title);
-            node.find(".title_edit").addClass("visible");
-            node.find(".title_edit").focus();*/
+            if(!$node.find(".title").hasClass("crossed")) {
+                $node.find(".title").hide();
+                $node.find(".titleEdit").removeClass("none");
+                $node.find(".titleEdit").focus();
+                $node.find(".titleEdit").val($node.find(".title").text());
+            }
         });
-        $node.find(".title_edit").focusout(function(){
 
-            $node.find(".title_edit").removeClass("visible");
-            //$node.find(".title").text(new_name);
+        $node.find(".titleEdit").blur(function(){
+            $node.find(".titleEdit").addClass("none");
+            $node.find(".title").text($node.find(".titleEdit").val());
             $node.find(".title").show();
+
         });
 
-/*
-            node.find(".title_edit").change(function () {
-                var new_name= $(this).val();
-                alert(new_name);
-            });*/
+        $node.find(".titleEdit").keypress(function(e) {
+            if(e.which === 13) {
+                $node.find(".titleEdit").addClass("none");
+                $node.find(".title").text($node.find(".titleEdit").val());
+                $node.find(".title").show();
+            }
+        });
+        $node.find(".titleEdit").on('keyup',function(){
+            $needed_item.find(".name").text($(this).val());
+            $bought_item.find(".name").text($(this).val());
 
-/*
-        node.find(".title_edit").change(function () {
-            var new_name= $(this).val();
-            alert(new_name);
-
-        });*/
-
-
+        });
 
 
     }
